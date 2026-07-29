@@ -16,22 +16,98 @@
   <body>
     <header>
       <div class="container">
-        <h1 class="brand">Order</h1>
+        <div class="header-box">
+          <h1 class="brand">Order</h1>
 
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="order.html">Order</a>
-        </nav>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="container">
-        <p>
-          Online ordering is coming soon. Please visit our bakery or call us to
-          place your order.
-        </p>
+        <form>
+          <fieldset>
+            <legend>Who is picking up?</legend>
+
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="field"
+              placeholder="Your name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="field"
+              placeholder="you@example.com"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <legend>Pickup Day</legend>
+
+            <label>
+              <input type="radio" name="day" value="Saturday" checked />
+              Saturday
+            </label>
+
+            <label>
+              <input type="radio" name="day" value="Sunday" />
+              Sunday
+            </label>
+
+            <label for="time">Pickup Time</label>
+            <select id="time" name="time" class="field">
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend>Your Order</legend>
+
+            <label>
+              <input type="checkbox" name="order" value="Butter Croissant" />
+              Butter Croissant
+            </label>
+
+            <label>
+              <input type="checkbox" name="order" value="Cinnamon Roll" />
+              Cinnamon Roll
+            </label>
+
+            <label>
+              <input type="checkbox" name="order" value="Blueberry Muffin" />
+              Blueberry Muffin
+            </label>
+
+            <label for="notes">Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              class="field"
+              rows="4"
+              placeholder="Any special requests?"
+            ></textarea>
+
+            <button type="submit">Submit Order</button>
+          </fieldset>
+        </form>
       </div>
     </main>
 
